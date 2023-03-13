@@ -1,0 +1,18 @@
+.first{
+    background-color: antiquewhite;
+    width: 250px;
+    height: 160px;
+}
+.second{
+    background-color: gray;
+    width: 250px;
+    height: 160px;
+}
+#proto{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+background-image: url(./2022-05-29.png);
+background-attachment: fixed;
+}
