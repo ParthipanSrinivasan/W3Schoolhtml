@@ -1,0 +1,29 @@
+.first{
+    border: 5px solid;
+    width: 250px;
+    height: 160px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    vertical-align: auto;
+    text-transform: lowercase;
+}
+.second{
+    border: 5px solid;
+    width: 250px;
+    height: 160px;
+    margin: 0px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 5px rgb(163, 74, 74);
+    letter-spacing: -2px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+    
+
+}
+a{
+    color: black;
+}
