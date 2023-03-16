@@ -1,0 +1,25 @@
+body{
+    background-color: azure;
+}
+.p1{
+    background-color: blueviolet;
+}
+.p2{
+    background-color: tomato;
+}
+.p3{
+    background-color: violet;
+}
+@media only screen and (min-width: 100%) {
+    body{
+        background-color: rgb(234, 61, 61);
+    }
+    
+}
+@media only screen and (max: width 578px ){
+body{
+    background-color: rgb(234, 64, 214);
+}
+}
+    
+
