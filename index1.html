@@ -13,11 +13,23 @@
         console.log(num.toString().length);
         let arr=num.toString().split('');
         console.log(arr);
+        let element="";
+        let e2=",";
         let dg = ['zero','one','two','three','four', 'five','six','seven','eight','nine'];
         for (j=0;j<arr.length;j++){
             let va=arr[j];
+         /*  if(j<arr.length-1){
+           element=element+dg[va]+e2;
+           }
+           else{
+            element=element+dg[va];
+           }
+          */
+            element=element+dg[va]+e2;
             console.log(dg[va]);
         }
+        element=element.substring(0,element.length-1);
+        console.log(element);
 
     </script>
 </body>
