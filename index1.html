@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SerialNumber</title>
+</head>
+<body>
+    <script>
+        let num=1345678;
+        console.log(num);
+        console.log(num.toString().length);
+        let arr=num.toString().split('');
+        for (i=0;i<arr.length;i++)
+        {
+            arr[i]=+arr[i] |0;
+        }
+        console.log(arr);
+        let dg = ['zero','one','two','three','four', 'five','six','seven','eight','nine'];
+        for (j=0;j<arr.length;j++){
+            let va=arr[j];
+            console.log(dg[va]);
+        }
+
+    </script>
+</body>
+</html>
