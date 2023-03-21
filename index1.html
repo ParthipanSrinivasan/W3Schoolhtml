@@ -14,10 +14,11 @@
         let arr=num.toString().split('');
         console.log(arr);
         let element="";
+        let e2=",";
         let dg = ['zero','one','two','three','four', 'five','six','seven','eight','nine'];
         for (j=0;j<arr.length;j++){
             let va=arr[j];
-            element=element+dg[va];
+            element=element+dg[va]+e2;
             console.log(dg[va]);
         }
         console.log(element);
