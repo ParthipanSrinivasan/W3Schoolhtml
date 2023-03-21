@@ -18,7 +18,10 @@
         let dg = ['zero','one','two','three','four', 'five','six','seven','eight','nine'];
         for (j=0;j<arr.length;j++){
             let va=arr[j];
-            element=element+dg[va]+e2;
+           if(j<arr.length-1)
+           element=element+dg[va]+e2;
+           else
+           element=element+dg[va];
             console.log(dg[va]);
         }
         console.log(element);
