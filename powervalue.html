@@ -11,17 +11,13 @@
         function fun(){
             let n=document.getElementById("mytext").value;
             let va=document.getElementById("myvalue").value;
-            console.log(n);
-            console.log(va);
+            console.log(Math.pow(n,va));
         }
-        document.getElementById("mybutton").onclick = fun(); 
     </script>
-    <form action="">
         <label for="">value</label><input type="text" id="mytext">
     <br>
         <label for="">Power of value</label><input type="text"id="myvalue">
         <br>
-        <input type="submit" id="mybutton" onclick="fun">
-    </form>
+        <input type="button" value="submit" id="mybutton" onclick="fun()">
 </body>
 </html>
