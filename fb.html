@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebooksign</title>
+</head>
+<body>
+    <script>
+
+    </script>
+  <div class="">
+    <form action="" id="form">
+        <h1>facebook</h1>
+        <h3>Create a new account</h3>
+        <p>It's quick and easy.</p>
+        <br>
+        <input type="text" name="first_name" placeholder="FirstName"> <input type="text" name="sure_name" placeholder="Surename" id="m1">
+        <br>
+        <input type="text" name="user_id" placeholder="Mobile number or email address" id="m2">
+        <br>
+        <input type="password" name="new_password" placeholder="New password" required="they compliesary fill" id="m3">
+        <br>
+        <input type="date"> 
+        <p>Gender</p>
+        <input type="radio" name="request"> <label for="">Male</label><input type="radio" name="request"> <label for="">Female</label><input type="radio" name="request" ><label for="">Custom</label>
+        <p>People who use our service may have uploaded your contact information to Facebook.</p>
+        <p>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+        <input type="button" value="Sign Up" >
+        <br>
+        <a href="https://www.facebook.com/">Already have an account?</a>
+        <br>
+  </div>
+  <script>
+    let form = document.getElementById("form");
+    form.addEventListener('button',function(event)){
+        event.preventDefault()
+    }
+    function myFuncation() {
+        let n1=document.getElementById("m1").value;
+        let n2=document.getElementById("m2").value;
+        let n3=document.getElementById("m3").value;
+    }
+  </script>
+</body>
+</html>
