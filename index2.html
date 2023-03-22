@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>serialnumberdigits</title>
+</head>
+<body>
+    <script>
+        let num=10;
+        console.log(num);
+        let element="";
+        let e2=",";
+        let dg = ['zero','one','two','three','four', 'five','six','seven','eight','nine'];
+        let th = ['','thousand','million', 'billion','trillion'];
+        let tn = ['ten','eleven','twelve','thirteen', 'fourteen','fifteen','sixteen', 'seventeen','eighteen','nineteen'];
+        let tw = ['twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];
+        for (j=0;j<arr.length;j++){
+            let va=arr[j];
+            if(num<10){
+                element=element+dg[va]+""
+            }
+            else if(num<100){
+                element=element+dg[va]+"hundred";
+            }
+            else if(num<1000){
+                element=element+dg[va]+"thousands";
+            }
+            
+            } 
+
+    </script>
+</body>
+</html>
