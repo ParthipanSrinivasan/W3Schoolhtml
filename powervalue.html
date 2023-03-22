@@ -8,9 +8,16 @@
 </head>
 <body>
     <script>
-        let n=11;
-        let va=2;
-        console.log(Math.pow(n,va));
+        let n=document.getElementById("mytext").value;
+        let va=document.getElementById("myvalue").value;
+        document.getElementById("mybutton")=Math.pow(n, va);
     </script>
+    <form action="">
+        <label for="">value</label><input type="text" id="mytext">
+    <br>
+        <label for="">Power of value</label><input type="text"id="myvalue">
+        <br>
+        <input type="Submit" id="mybutton" onclick="fun">
+    </form>
 </body>
 </html>
