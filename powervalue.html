@@ -11,9 +11,9 @@
         function fun(){
             let n=document.getElementById("mytext").value;
             let va=document.getElementById("myvalue").value;
-            return Math.pow(n,va);
+            document.getElementById("demo").innerHTML = Math.pow(n,va);
         }
-        document.getElementById("demo").innerHTML = fun();
+        
        
     </script>
     <p id="demo"></p>
