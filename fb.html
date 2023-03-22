@@ -16,7 +16,7 @@
         <h3>Create a new account</h3>
         <p>It's quick and easy.</p>
         <br>
-        <input type="text" name="first_name" placeholder="FirstName"> <input type="text" name="sure_name" placeholder="Surename" id="m1">
+        <input type="text" name="first_name" placeholder="FirstName" id="m"> <input type="text" name="sure_name" placeholder="Surename" id="m1">
         <br>
         <input type="text" name="user_id" placeholder="Mobile number or email address" id="m2">
         <br>
@@ -32,15 +32,17 @@
         <a href="https://www.facebook.com/">Already have an account?</a>
         <br>
   </div>
+  <p id="d1"></p>
   <script>
     let form = document.getElementById("form");
     form.addEventListener('button',function(event)){
-        event.preventDefault()
-    }
-    function myFuncation() {
+        event.preventDefault(){
+        let n=document.getElementById("m").value;
         let n1=document.getElementById("m1").value;
         let n2=document.getElementById("m2").value;
         let n3=document.getElementById("m3").value;
+        document.getElementById("d1").innerHTML =n+"/n"+n1+"/n"+n2+"/n"+n3;
+        }
     }
   </script>
 </body>
