@@ -8,21 +8,18 @@
 </head>
 <body>
     <script>
-        let num=100;
-        for(i=0;i<num;i++)
+        let num=5;
+        let set=""
+        for(i=1;i<=num;i++)
         {
-            if(i%2!=0)
+            for(j=1;j<=i;j++)
             {
-                console.log(i);
+                set=set+j;
             }
+            set =set+"\n";
         }
-        for(j=0;j<num;j++)
-        {
-            if(i%2==0)
-            {
-                console.log(j);
-            }
-        }
+        console.log(set);
+    
     </script>
 </body>
 </html>
