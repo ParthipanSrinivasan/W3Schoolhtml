@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="">
-    <form onsubmit="myFunction()" name="myform" method="get">
+    <form onsubmit="myFunction(event)" name="myform" method="get">
         <h1>facebook</h1>
         <h3>Create a new account</h3>
         <p>It's quick and easy.</p>
@@ -17,7 +17,7 @@
         <br>
         <input type="text" name="user_id" placeholder="Mobile number or email address">
         <br>
-        <input type="text" name="new_password" placeholder="New password" required="they compliesary fill">
+        <input type="password" name="new_password" placeholder="New password" required="they compliesary fill">
         <br>
         <input type="date"> 
         <p>Gender</p>
@@ -32,18 +32,11 @@
   </div>
   <p id="d1"></p>
   <script>
-   function myFunction(form){
-    let input = form.inputbox.value;
-    let formData = new FormData(form);
-    let object = {};
-    formData.forEach(function(value, key){
-    object[key] = value;
-   });
-   let json = JSON.stringify(object);
-    alert(json);
-
-  alert(JSON.stringify(Object.fromEntries(formData)));
-  }
+     function myFunction(event){
+        event.preventDefault()
+        event.stopPropagation()
+      console.log("$event",event)
+    }
   </script>
 </body>
 </html>
