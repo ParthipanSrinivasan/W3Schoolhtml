@@ -17,7 +17,7 @@
         <br>
         <input type="text" name="user_id" placeholder="Mobile number or email address">
         <br>
-        <input type="password" name="new_password" placeholder="New password" required="they compliesary fill">
+        <input type="text" name="new_password" placeholder="New password" required="they compliesary fill">
         <br>
         <input type="date"> 
         <p>Gender</p>
@@ -33,13 +33,17 @@
   <p id="d1"></p>
   <script>
    function myFunction(form){
-    let in=form.inputbox.value;
+    let input = form.inputbox.value;
     let formData = new FormData(form);
     let object = {};
     formData.forEach(function(value, key){
     object[key] = value;
-    
-   }
+   });
+   let json = JSON.stringify(object);
+    alert(json);
+
+  alert(JSON.stringify(Object.fromEntries(formData)));
+  }
   </script>
 </body>
 </html>
