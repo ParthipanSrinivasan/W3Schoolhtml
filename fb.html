@@ -8,12 +8,12 @@
 </head>
 <body>
   <div class="">
-    <form onsubmit="myFunction(event)" name="myform" method="get">
+    <form onsubmit="myFunction(event)" name="myform" method="get" id="l1">
         <h1>facebook</h1>
         <h3>Create a new account</h3>
         <p>It's quick and easy.</p>
         <br>
-        <input type="text" name="first_name" placeholder="FirstName" id="m"> <input type="text" name="sure_name" placeholder="Surename">
+        <input type="text" name="first_name" placeholder="FirstName" id="m"><input type="text" name="sure_name" placeholder="Surename">
         <br>
         <input type="text" name="user_id" placeholder="Mobile number or email address">
         <br>
@@ -25,18 +25,22 @@
         <p>People who use our service may have uploaded your contact information to Facebook.</p>
         <p>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
         <input type="submit" value="Sign Up" >
-        <br>
-        <a href="https://www.facebook.com/">Already have an account?</a>
-        <br>
     </form>
   </div>
   <p id="d1"></p>
   <script>
      function myFunction(event){
-        event.preventDefault()
-        event.stopPropagation()
-      console.log("$event",event)
-    }
+      event.preventDefault()
+      event.stopPropagation()
+      console.log("$event",event);
+      console.log("$event",event,event.target.length)
+        for(var i = 0;i <event.target.length-1; i++){
+          item= event.target[i];
+          let text = '{"emo":[' + {"item":event.target[i]} +']}';
+          const obj = JSON.parse(text);
+          document.getElementById("d1").innerHTML = obj.emo[i].item;
+        } 
+     }
   </script>
 </body>
 </html>
