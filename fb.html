@@ -36,10 +36,15 @@
       console.log("$event",event,event.target.length)
         for(var i = 0;i <event.target.length-1; i++){
           item= event.target[i];
-          let text = '{"emo":[' + {"item":event.target[i]} +']}';
-          const obj = JSON.parse(text);
-          document.getElementById("d1").innerHTML = obj.emo[i].item;
+          console.log("item",item.value);
         } 
+        let text = '{"emo":[' + {item.name[1] : event.value[1]} +
+        {'item.name[2]' : 'event.value[2]'} +
+        {'item.name[3]' : 'event.value[3]'} +
+        {'item.name[4]' : 'event.value[4]'} +']}';
+          const obj = JSON.parse(text);
+          document.getElementById("d1").innerHTML = obj.emo[i].text;
+          console.log("item",item.name);
      }
   </script>
 </body>
