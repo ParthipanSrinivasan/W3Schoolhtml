@@ -5,54 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebooksign</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
 </head>
 <body>
-  <div class="">
-    <p id="lo"></p>
-    <form onsubmit="myFunction(event)" name="myform" method="GET">
-        <h1>facebook</h1>
-        <h3>Create a new account</h3>
-        <p>It's quick and easy.</p>
-        <br>
-        <input type="text" name="first_name" id="m1" placeholder="FirstName"><input type="text" name="sure_name" id="m2" placeholder="Surename">
-        <br>
-        <input type="text" name="user_id" id="m3" placeholder="Mobile number or email address">
-        <br>
-        <input type="password" name="new_password" id="m4" placeholder="New password">
-        <br>
-        <input type="date"> 
-        <p>Gender</p>
-        <input type="radio" name="request"> <label for="">Male</label><input type="radio" name="request"> <label for="">Female</label><input type="radio" name="request" ><label for="">Custom</label>
-        <p>People who use our service may have uploaded your contact information to Facebook.</p>
-        <p>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
-        <input type="submit" value="Sign Up" >
-    </form>
-  </div>
-  <p id="d1"></p>
-  <script>
-   function myFunction(event){
-      event.preventDefault()
-      event.stopPropagation()
+  <div class="container">
+    <h1 class="justify-content-between text-center gy-5 text-primary">facebook</h1>
+    <div  class="row form-group justify-content-between">
+        <form onsubmit="myFunction(event)" class="border bg-light w-25">
+            <div class="text-lg-start">
+                <h3>Create a new account</h3>
+                <p>It's quick and easy.</p>
+            </div>
+                <div>
+                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="FirstName">
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" name="sure_name" id="sure_name" placeholder="Surename">
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" name="user_id" id="user_id" placeholder="Mobile number or email address">
+                        </div>
+                        <div>
+                            <input type="password" class="form-control" name="new_password" id="new_password" placeholder="New password">
+                        </div>
+                        <div>
+                            <input type="date" class="form-control"> 
+                        </div>
+                        <div class="gy-5">
+                            <p>Gender</p>
+                        </div>
+                        <div>
+                            <input type="radio" name="request"> <label for="">Male</label><input type="radio" name="request"> <label for="">Female</label><input type="radio" name="request" ><label for="">Custom</label>
+                        </div>
+                        <div class="gy-5 font-size: 2.5rem">
+                            <p >People who use our service may have uploaded your contact information to Facebook.</p>
+                            <p class="text-muted">By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+                        </div>
+                        <div class="text-center gy-5">
+                            <input class="btn btn-primary text-center" type="submit" value="Sign Up" >
+                        </div>
+        </form>
+    </div>
+</div>
+<script>
+    function myFunction(event){
+        event.preventDefault()
+        event.stopPropagation()
         var arr=[];
         for(var i = 0;i <event.target.length; i++){
-         var item= event.target[i];
-          if(item?.value && item?.name){
-            arr[item.name]=item?.value;
-          }
-      console.log("arr",arr); 
-      }
+            var item= event.target[i];
+            if(item?.value && item?.name){
+                arr[item.name]=item?.value;
+                }
+                console.log("arr",arr); 
+                    }
     }
-      var postData= {
+        var postData= {
         "first_name":"raja",
         "user_id":"raja",
         "new_password":"raja",
         "sure_name":"raja",
-      }
-      console.log(postData["first_name"]);
-      document.getElementById("m1").value =postData["first_name"];
-      document.getElementById("m3").value =postData["user_id"];
-      document.getElementById("m4").value =postData["new_password"];
-      document.getElementById("m2").value =postData["sure_name"];
-  </script>
+        }
+        document.getElementById("first_name").value =postData["first_name"];
+        document.getElementById("user_id").value =postData["user_id"];
+        document.getElementById("new_password").value =postData["new_password"];
+        document.getElementById("sure_name").value =postData["sure_name"];
+</script>
 </body>
 </html>
