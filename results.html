@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
+    <style>
+        .container{
+            background-color: bisque;
+        }
+    </style>
 </head>
 <body>
     <table border="1">
@@ -30,7 +35,7 @@
       "id": "1",
       "name": "what is u r name?",
       "image": "",
-      "student_exam_id": "5",
+      "student_exam_id": "4",
       "student_exam_question_option_id": "1",
       "student_exam_question_id": "5"
     },
@@ -47,21 +52,21 @@
 };
     var tr="";
     for(i=0;i<data.results.length;+i++){
-        tr= tr+"<tr>"+
-            "<td>"+data.results[i].id +"</td>"+
-            "<td>"+data.results[i].name +"</td>"+
-            "<td>"+data.results[i].image +"</td>"+
-            "<td>"+data.results[i].student_exam_id+"</td>"+
-            "<td>"+data.results[i].student_exam_question_option_id+"</td>"+
-            "<td>"+data.results[i].student_exam_question_id+"</td>"+
-            "</tr>";
+        tr+="<tr>";
+            tr+="<td>"+data.results[i].id +"</td>";
+            tr+="<td>"+data.results[i].name +"</td>";
+            tr+="<td>"+data.results[i].image +"</td>";
             if(5==data.results[i].student_exam_id){
-                
+                tr+= "<td class=container>"+data.results[i].student_exam_id+"</td>";
+            }
+            else{
+                tr+= "<td>"+data.results[i].student_exam_id+"</td>";
+            }
+            tr+="<td>"+data.results[i].student_exam_question_option_id+"</td>";
+            tr+="<td>"+data.results[i].student_exam_question_id+"</td>";
+            +"</tr>";
             }
             document.getElementById("id").innerHTML=tr;
-
-    }
-    
     </script>
 </body>
 </html>
