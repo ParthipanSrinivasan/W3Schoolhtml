@@ -9,7 +9,7 @@
 <body>
   <div class="">
     <p id="lo"></p>
-    <form onsubmit="myFunction(event)" name="myform" method="GET" autocomplete="on">
+    <form onsubmit="myFunction(event)" name="myform" method="GET">
         <h1>facebook</h1>
         <h3>Create a new account</h3>
         <p>It's quick and easy.</p>
@@ -30,11 +30,17 @@
   </div>
   <p id="d1"></p>
   <script>
-    /* function myFunction(event){
+   function myFunction(event){
       event.preventDefault()
       event.stopPropagation()
-      
-      } */
+        var arr=[];
+        for(var i = 0;i <event.target.length; i++){
+         var item= event.target[i];
+          if(item?.value && item?.name){
+            arr[item.name]=item?.vale
+          }
+      console.log("arr",arr);
+      }
       var postData= {
         "first_name":"raja",
         "user_id":"raja",
