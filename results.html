@@ -8,21 +8,21 @@
 </head>
 <body>
     <table border="1">
-        <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>image</th>
-            <th>student_exam_id</th>
-            <th>student_exam_question_id</th>
-        </tr>
-        <tr>
-            <td id="id"></td>
-            <td id="name"></td>
-            <td id="image"></td>
-            <td id="student_exam_id"></td>
-            <td id="student_exam_question_option_id"></td>
-        </tr>
+            <tr>
+                <th>id</th>
+                <th >name</th>
+                <th>image</th>
+                <th>student_exam_id</th>
+                <th>student_exam_question_option_id</th>
+                <th>student_exam_question_id</th>
+            </tr>
+       <tbody id="id">
+        
+       </tbody>
     </table>
+    <style>
+
+    </style>
     <script>
     var data = {
   "results": [
@@ -30,7 +30,7 @@
       "id": "1",
       "name": "what is u r name?",
       "image": "",
-      "student_exam_id": "4",
+      "student_exam_id": "5",
       "student_exam_question_option_id": "1",
       "student_exam_question_id": "5"
     },
@@ -38,21 +38,30 @@
       "id": "2",
       "name": "which school r u studied? ",
       "image": "",
-      "student_exam_id": "4",
+      "student_exam_id": "5",
       "student_exam_question_option_id": "1",
       "student_exam_question_id": "5"
     }
   ],
   "count": 2
-}
+};
+    var tr="";
     for(i=0;i<data.results.length;+i++){
-        document.getElementById("id").innerHTML = data.results[i].id;
-        document.getElementById("name").innerHTML = data.results[i].name;
-        document.getElementById("image").innerHTML = data.results[i].image;
-        document.getElementById("student_exam_id").innerHTML = data.results[i].student_exam_id;
-        document.getElementById("student_exam_question_option_id").innerHTML = data.results[i].student_exam_question_option_id;
-        document.getElementById("student_exam_question_id").innerHTML = data.results[i].student_exam_question_id;
+        tr= tr+"<tr>"+
+            "<td>"+data.results[i].id +"</td>"+
+            "<td>"+data.results[i].name +"</td>"+
+            "<td>"+data.results[i].image +"</td>"+
+            "<td>"+data.results[i].student_exam_id+"</td>"+
+            "<td>"+data.results[i].student_exam_question_option_id+"</td>"+
+            "<td>"+data.results[i].student_exam_question_id+"</td>"+
+            "</tr>";
+            if(5==data.results[i].student_exam_id){
+                
+            }
+            document.getElementById("id").innerHTML=tr;
+
     }
+    
     </script>
 </body>
 </html>
