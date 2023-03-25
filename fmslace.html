@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebooksign</title>
+</head>
+<body>
+  <div class="">
+    <form onsubmit="myFunction(event)" name="myform">
+        <h1>facebook</h1>
+        <h3>Create a new account</h3>
+        <p>It's quick and easy.</p>
+        <br>
+        <input type="text" name="first_name" placeholder="FirstName" id="m"><input type="text" name="sure_name" placeholder="Surename">
+        <br>
+        <input type="text" name="user_id" placeholder="Mobile number or email address">
+        <br>
+        <input type="password" name="new_password" placeholder="New password" required="they compliesary fill">
+        <br>
+        <input type="date"> 
+        <p>Gender</p>
+        <input type="radio" name="request"> <label for="">Male</label><input type="radio" name="request"> <label for="">Female</label><input type="radio" name="request" ><label for="">Custom</label>
+        <p>People who use our service may have uploaded your contact information to Facebook.</p>
+        <p>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+        <input type="submit" value="Sign Up" >
+    </form>
+  </div>
+  <p id="d1"></p>
+  <script>
+     function myFunction(event){
+      event.preventDefault()
+      event.stopPropagation()
+      /* var postData= {
+        "first_name":"raja",
+        "new_password":"raja",
+        "user_id":"raja",
+      }
+      console.log("postData",postData) */
+      var data = [];
+      for(var i = 0;i <event.target.length; i++){
+        var item = event.target[i];
+        if (item?.value && item?.name){
+          data[item.name] = item?.value;
+        }
+      }
+      console.log("data",data)
+     }
+  </script>
+</body>
+</html>

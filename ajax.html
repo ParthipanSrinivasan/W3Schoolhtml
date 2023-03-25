@@ -20,6 +20,7 @@
         </tbody>
     </table>
     <br>
+    <form onclick="secondFunction(event)">
     <label for="user_id">user_id</label><input type="text" name="id" id="id">
     <br><br>
     <label for="name">name</label><input type="text" name="name" id="name">
@@ -27,6 +28,10 @@
     <label for="user_name">user_name</label><input type="text" name="user_name" id="user_name">
     <br><br>
     <label for="password">password</label><input type="password" name="password" id="password">
+    <br>
+    <label for="repassword">repassword</label><input type="password" name="repassword" id="repassword" required>
+    <input type="submit" value="Submit">
+    </form>
     <script>
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
@@ -60,6 +65,22 @@
                     
                 })
                 }
+            function secondFunction(event){
+                event.preventDefault()
+                event.stopPropagation()
+               var le=document.getElementById("password").value;
+               var lr=document.getElementById("repassword").value;
+               console.log(le);
+               console.log(lr)
+               if(le==lr){
+                console.log(le+"=>the password is equal=>"+lr);
+               }
+               else
+               {
+                console.log(le+"=>the password is not equa=>"+lr)
+               }
+               
+            }
     </script>
 </body>
 </html>  
