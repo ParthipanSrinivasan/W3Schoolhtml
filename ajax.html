@@ -19,7 +19,14 @@
         <tbody id="container">
         </tbody>
     </table>
-    <p id="contai"></p>
+    <br>
+    <label for="user_id">user_id</label><input type="text" name="id" id="id">
+    <br><br>
+    <label for="name">name</label><input type="text" name="name" id="name">
+    <br><br>
+    <label for="user_name">user_name</label><input type="text" name="user_name" id="user_name">
+    <br><br>
+    <label for="password">password</label><input type="password" name="password" id="password">
     <script>
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
@@ -46,11 +53,10 @@
                 .then(response => response.json())
                 .then(json => {
                     console.log(json)
-                    var mo="<h4>"+"UserID :"+json.id+"</h4>"+
-                    "<h4>"+"UserName :"+json.name+"</h4>"+
-                    "<h4>"+"UserUSERIDNAME :"+json.username+"</h4>"+
-                    "<h4>"+"UserEMAIL :"+json.email+"</h4>";
-                    document.getElementById("contai").innerHTML=mo;
+                    document.getElementById("id").value=json.id;
+                    document.getElementById("name").value=json.name;
+                    document.getElementById("user_name").value=json.username;
+                    document.getElementById("password").value=json.email;
                     
                 })
                 }
