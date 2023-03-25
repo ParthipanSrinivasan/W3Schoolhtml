@@ -31,14 +31,18 @@
                 console.log(json[0].address.street)
                 var elm="";
                 for(i=0; i<json.length; i++){
-                    elm+="<tr>"+
-                    "<td>"+json[i].name +"</td>"+
-                    "<td>"+json[i].username +"</td>"+
-                    "<td>"+json[i].email +"</td>"+
+                    elm+="<tr>";
+                    elm+="<td>"+json[i].name +"</td>";
+                    elm+="<td>"+"<button onclick=myFunction()>"+json[i].username +"</button>"+"</td>";
+                    elm+="<td>"+json[i].email +"</td>";
                     "</tr>";
-                    document.getElementById("container").innerHTML=elm;
                 }
+                document.getElementById("container").innerHTML=elm;
      })
+     function myFunction() {
+        var la="raja";
+        console.log(la);
+     }
         
     </script>
 </body>
