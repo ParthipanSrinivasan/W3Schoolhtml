@@ -16,12 +16,8 @@
             </tr>
         </thead>
         <tbody id="container">
-
         </tbody>
     </table>
-
-
-
     <script>
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
@@ -31,19 +27,18 @@
                 console.log(json[0].address.street)
                 var elm="";
                 for(i=0; i<json.length; i++){
-                    elm+="<tr>";
-                    elm+="<td>"+json[i].name +"</td>";
-                    elm+="<td>"+"<button onclick=myFunction()>"+json[i].username +"</button>"+"</td>";
-                    elm+="<td>"+json[i].email +"</td>";
+                    elm+="<tr onclick=myFunction(elm)>"+
+                        "<td>"+json[i].name +"</td>"+
+                        "<td>"+"<button>"+json[i].username +"</button>"+"</td>"+
+                        "<td>"+json[i].email +"</td>"+
                     "</tr>";
                 }
                 document.getElementById("container").innerHTML=elm;
-     })
-     function myFunction() {
-        var la="raja";
-        console.log(la);
-     }
-        
+            })
+            function myFunction(name) {
+                this.name=this.name;
+                console.log(name);
+                }
     </script>
 </body>
 </html>  
